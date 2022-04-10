@@ -1,7 +1,7 @@
-import React from "react";
+import React, { Fragment, FunctionComponent } from "react";
 
-function App() {
-  return <div className="App"></div>;
-}
+const App: FunctionComponent = () => {
+  return <Fragment></Fragment>;
+};
 
 export default App;
