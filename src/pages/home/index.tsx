@@ -1,7 +1,7 @@
 import React, { Fragment, FunctionComponent } from "react";
 
-const HomeRoute: FunctionComponent = () => {
+const HomePage: FunctionComponent = () => {
   return <Fragment></Fragment>;
 };
 
-export default HomeRoute;
+export default HomePage;
