@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@feathersjs/authentication-client": "^4.5.13",
     "@feathersjs/client": "^4.5.13",
     "@feathersjs/feathers": "^4.5.12",
     "@feathersjs/socketio-client": "^4.5.13",

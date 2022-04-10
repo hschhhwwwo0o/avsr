@@ -1,11 +1,13 @@
+import feathers, { Application } from "@feathersjs/feathers";
+import socketio from "@feathersjs/socketio-client";
 import io from "socket.io-client";
-import feathers from "@feathersjs/client";
-import createApplication from "@feathersjs/feathers";
+import auth from "@feathersjs/authentication-client";
 
-const socket: SocketIOClient.Socket = io("https://abiisr-api.herokuapp.com/");
-const apiClient: createApplication.Application<any> = feathers();
+const socket = io("https://abiisr-api.herokuapp.com/");
+const apiClient: Application<any> = feathers();
 
-apiClient.configure(feathers.socketio(socket));
-apiClient.configure(feathers.authentication());
+apiClient.configure(socketio(socket));
+
+apiClient.configure(auth());
 
 export default apiClient;
