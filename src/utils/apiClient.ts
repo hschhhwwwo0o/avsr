@@ -7,7 +7,6 @@ const socket = io("https://abiisr-api.herokuapp.com/");
 const apiClient: Application<any> = feathers();
 
 apiClient.configure(socketio(socket));
-
 apiClient.configure(auth());
 
 export default apiClient;
