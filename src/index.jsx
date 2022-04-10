@@ -1,11 +1,16 @@
 import React from "react";
-import App from "./App";
-import reportWebVitals from "./reportWebVitals";
 import { createRoot } from "react-dom/client";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import HomeRoute from "routes/home";
+import reportWebVitals from "reportWebVitals";
 
 createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <App />
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<HomeRoute />} />
+      </Routes>
+    </BrowserRouter>
   </React.StrictMode>
 );
 
