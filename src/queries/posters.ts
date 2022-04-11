@@ -37,7 +37,7 @@ interface IBody {
   authorId: string;
 }
 
-async function createPoster(body: IBody) {
+async function createPoster(body: IBody): Promise<any> {
   const response = await apiClient.service("posters").create(body);
   return response;
 }
