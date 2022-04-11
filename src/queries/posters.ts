@@ -13,14 +13,14 @@ async function getPosters(): Promise<UseQueryResult> {
   return data;
 }
 
-async function getUserPosters(userId: string, $limit: number = 3): Promise<UseQueryResult> {
+async function getUserPosters(authorId: string, $limit: number = 3): Promise<UseQueryResult> {
   const data: UseQueryResult = await apiClient.service("posters").find({
     query: {
       $limit,
       $sort: {
         createdAt: -1,
       },
-      userId,
+      authorId,
     },
   });
   return data;
@@ -31,4 +31,15 @@ async function getPoster(id: string): Promise<UseQueryResult> {
   return data;
 }
 
-export { getPosters, getUserPosters, getPoster };
+interface IBody {
+  title: string;
+  image: string;
+  authorId: string;
+}
+
+async function createPoster(body: IBody) {
+  const response = await apiClient.service("posters").create(body);
+  return response;
+}
+
+export { getPosters, getUserPosters, getPoster, createPoster };
