@@ -11,7 +11,11 @@ interface IFeathersClient {
 const socket: SocketIOClient.Socket = io("https://abiisr-api.herokuapp.com/");
 const apiClient: Application<IFeathersClient> = feathers();
 
-apiClient.configure(socketio(socket));
+apiClient.configure(
+  socketio(socket, {
+    timeout: 12000,
+  })
+);
 apiClient.configure(auth());
 
 export default apiClient;
