@@ -8,7 +8,7 @@ interface IFeathersClient {
   users: Service<any>;
 }
 
-const socket: SocketIOClient.Socket = io("https://abiisr-api.herokuapp.com/");
+const socket: SocketIOClient.Socket = io("https://avsr-api.herokuapp.com/");
 const apiClient: Application<IFeathersClient> = feathers();
 
 apiClient.configure(
