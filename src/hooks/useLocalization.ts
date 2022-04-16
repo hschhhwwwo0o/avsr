@@ -6,15 +6,10 @@ function useLocalization() {
   const [localization, setLocalization] = useState(en);
 
   useEffect(() => {
-    const _lang = localStorage.getItem("lang");
-
+    const _lang: string | null = localStorage.getItem("lang");
     if (_lang) {
-      if (_lang === "en") {
-        setLocalization(en);
-      }
-      if (_lang === "fr") {
-        setLocalization(fr);
-      }
+      if (_lang === "en") setLocalization(en);
+      if (_lang === "fr") setLocalization(fr);
     }
   }, []);
 
