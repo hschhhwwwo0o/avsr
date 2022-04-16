@@ -1,9 +1,5 @@
 import { makeAutoObservable } from "mobx";
-
-export interface IUser {
-  email: string;
-  name: string;
-}
+import { IUser } from "types";
 
 class User {
   constructor() {
@@ -13,6 +9,7 @@ class User {
   public user: IUser = {
     email: "",
     name: "",
+    image: "",
   };
 }
 
