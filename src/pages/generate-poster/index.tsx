@@ -1,6 +1,7 @@
-import React, { Fragment, FunctionComponent } from "react";
+import React, { Fragment } from "react";
+import { Page } from "types";
 
-const GeneratePosterPage: FunctionComponent = () => {
+const GeneratePosterPage: Page = () => {
   return <Fragment></Fragment>;
 };
 

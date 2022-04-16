@@ -1,6 +1,7 @@
-import React, { Fragment, FunctionComponent } from "react";
+import React, { Fragment } from "react";
+import { Page } from "types";
 
-const SignInPage: FunctionComponent = () => {
+const SignInPage: Page = () => {
   return <Fragment></Fragment>;
 };
 
