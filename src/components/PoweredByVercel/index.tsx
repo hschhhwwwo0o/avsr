@@ -4,7 +4,7 @@ const PoweredByVercel: FunctionComponent = () => {
   return (
     <Fragment>
       <div className="h-12 uppercase font-semibold text-xs flex items-center justify-center bg-[#252525] text-white">
-        Powered by Vercel
+        <a href="https://vercel.com/dashboard">Powered by Vercel</a>
       </div>
     </Fragment>
   );
