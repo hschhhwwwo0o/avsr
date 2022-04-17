@@ -11,7 +11,7 @@ const ArtCard: FunctionComponent = () => {
             alt=""
           />
         </div>
-        <div className="mt-6">
+        <div className="mt-6 truncate">
           <span className="uppercase text-xl font-semibold">a brief inquiry into online relationships</span>
         </div>
         <div className="mt-4 flex flex-row items-center gap-4">
