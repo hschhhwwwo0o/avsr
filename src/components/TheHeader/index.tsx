@@ -1,14 +1,11 @@
 import React, { Fragment, FunctionComponent } from "react";
-import { useTranslation } from "react-i18next";
-import { NavLink } from "react-router-dom";
 import LanguageSelect from "components/LanguageSelect";
 import Logo from "components/Logo";
 import Burger from "components/Burger";
 import Profile from "./Profile";
+import Links from "./Links";
 
 const TheHeader: FunctionComponent = () => {
-  const { t } = useTranslation();
-
   return (
     <Fragment>
       <div>
@@ -16,12 +13,7 @@ const TheHeader: FunctionComponent = () => {
         <header className="h-[65px] border-[#EBEBEB] border-b flex items-center justify-center px-5 fixed top-0 w-screen z-50 2xl:px-0">
           <div className="max-w-[1500px] w-full flex justify-between">
             <ul className="flex flex-row gap-10 items-center">
-              <li className="text-sm font-medium uppercase hidden md:block">
-                <NavLink to="/">{t("Collection")}</NavLink>
-              </li>
-              <li className="text-sm font-medium uppercase hidden md:block">
-                <NavLink to="/generate-poster">{t("Generate Poster")}</NavLink>
-              </li>
+              <Links />
               <li>
                 <LanguageSelect />
               </li>
