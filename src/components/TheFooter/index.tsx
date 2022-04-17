@@ -1,5 +1,5 @@
-import PoweredByVercel from "components/PoweredByVercel";
 import React, { Fragment, FunctionComponent } from "react";
+import PoweredByVercel from "components/PoweredByVercel";
 
 const TheFooter: FunctionComponent = () => {
   return (

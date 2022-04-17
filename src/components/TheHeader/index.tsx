@@ -1,9 +1,9 @@
-import LanguageSelect from "components/LanguageSelect";
-import Logo from "components/Logo";
-import Burger from "components/Burger";
 import React, { Fragment, FunctionComponent } from "react";
 import { useTranslation } from "react-i18next";
 import { NavLink } from "react-router-dom";
+import LanguageSelect from "components/LanguageSelect";
+import Logo from "components/Logo";
+import Burger from "components/Burger";
 import Profile from "./Profile";
 
 const TheHeader: FunctionComponent = () => {
