@@ -16,7 +16,7 @@ const TheHeader: FunctionComponent = () => {
           <div className="max-w-[1500px] w-full flex justify-between">
             <ul className="flex flex-row gap-10 items-center">
               <li className="text-sm font-medium uppercase hidden md:block">
-                <NavLink to="/">Collection</NavLink>
+                <NavLink to="/">{t("Collection")}</NavLink>
               </li>
               <li className="text-sm font-medium uppercase hidden md:block">
                 <NavLink to="/generate-poster">{t("Generate Poster")}</NavLink>
