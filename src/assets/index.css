@@ -10,6 +10,15 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+body::-webkit-scrollbar {
+  width: 6px;
+  background: #ebebeb;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: #d3d3d3;
+}
+
 * {
   box-sizing: border-box;
 }
