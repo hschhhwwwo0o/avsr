@@ -5,11 +5,9 @@ import reportWebVitals from "reportWebVitals";
 import "assets/index.css";
 import App from "App";
 
-const queryClient = new QueryClient();
-
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <QueryClientProvider client={queryClient}>
+    <QueryClientProvider client={new QueryClient()}>
       <App />
     </QueryClientProvider>
   </StrictMode>
