@@ -1,10 +1,13 @@
 import React, { Fragment, FunctionComponent } from "react";
+import { useTranslation } from "react-i18next";
 
 const PoweredByVercel: FunctionComponent = () => {
+  const { t } = useTranslation();
+
   return (
     <Fragment>
       <div className="h-12 uppercase font-semibold text-xs flex items-center justify-center bg-[#252525] text-white">
-        <a href="https://vercel.com/dashboard">Powered by Vercel</a>
+        <a href="https://vercel.com/dashboard">{t("Powered by Vercel")}</a>
       </div>
     </Fragment>
   );

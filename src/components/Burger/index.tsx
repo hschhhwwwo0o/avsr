@@ -1,7 +1,9 @@
 import React, { Fragment, FunctionComponent, useState } from "react";
+import { useTranslation } from "react-i18next";
 import { NavLink } from "react-router-dom";
 
 const Burger: FunctionComponent = () => {
+  const { t } = useTranslation();
   const [isActive, setIsActive] = useState<boolean>(false);
 
   return (
@@ -22,13 +24,13 @@ const Burger: FunctionComponent = () => {
       {isActive && (
         <ul className="fixed w-screen h-[calc(100vh-65px)] bg-white left-0 bottom-0 py-20 flex flex-col items-center gap-6">
           <li className="font-medium text-lg uppercase">
-            <NavLink to="/">Collection</NavLink>
+            <NavLink to="/">{t("Collection")}</NavLink>
           </li>
           <li className="font-medium text-lg uppercase">
-            <NavLink to="/generate-poster">Generate Poster</NavLink>
+            <NavLink to="/generate-poster">{t("Generate Poster")}</NavLink>
           </li>
           <li className="font-medium text-lg uppercase">
-            <NavLink to="/generate-poster">Profile</NavLink>
+            <NavLink to="/generate-poster">{t("Profile")}</NavLink>
           </li>
         </ul>
       )}

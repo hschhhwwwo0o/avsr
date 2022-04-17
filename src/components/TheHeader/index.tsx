@@ -1,11 +1,14 @@
 import LanguageSelect from "components/LanguageSelect";
 import Logo from "components/Logo";
-import Burger from "icons/Burger";
+import Burger from "components/Burger";
 import React, { Fragment, FunctionComponent } from "react";
+import { useTranslation } from "react-i18next";
 import { NavLink } from "react-router-dom";
 import Profile from "./Profile";
 
 const TheHeader: FunctionComponent = () => {
+  const { t } = useTranslation();
+
   return (
     <Fragment>
       <div>
@@ -16,7 +19,7 @@ const TheHeader: FunctionComponent = () => {
                 <NavLink to="/">Collection</NavLink>
               </li>
               <li className="text-sm font-medium uppercase hidden md:block">
-                <NavLink to="/generate-poster">Generate Poster</NavLink>
+                <NavLink to="/generate-poster">{t("Generate Poster")}</NavLink>
               </li>
               <li>
                 <LanguageSelect />
