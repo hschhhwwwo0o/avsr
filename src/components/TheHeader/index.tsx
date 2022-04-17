@@ -28,7 +28,7 @@ const TheHeader: FunctionComponent = () => {
             <div className="md:hidden flex items-center justify-center">
               <Burger />
             </div>
-            <div className="hidden md:block">
+            <div className="hidden items-center justify-center md:flex">
               <Profile />
             </div>
           </div>
