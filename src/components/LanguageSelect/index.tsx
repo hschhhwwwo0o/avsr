@@ -2,6 +2,7 @@ import React, { Fragment, FunctionComponent } from "react";
 import { useTranslation } from "react-i18next";
 import USA from "icons/USA/index";
 import FR from "icons/FR";
+import CH from "icons/CH";
 
 const LanguageSelect: FunctionComponent = () => {
   const { t, i18n } = useTranslation();
@@ -13,6 +14,11 @@ const LanguageSelect: FunctionComponent = () => {
       return;
     }
     if (localStorage.getItem("lng") === "fr") {
+      i18n.changeLanguage("ch");
+      localStorage.setItem("lng", "ch");
+      return;
+    }
+    if (localStorage.getItem("lng") === "ch") {
       i18n.changeLanguage("en");
       localStorage.setItem("lng", "en");
       return;
@@ -26,6 +32,7 @@ const LanguageSelect: FunctionComponent = () => {
       <button className="h-[27px] flex flex-row gap-2 items-center px-1 rounded-sm" onClick={onChangeLanguage}>
         {t("lng") === "en" && <USA />}
         {t("lng") === "fr" && <FR />}
+        {t("lng") === "ch" && <CH />}
         <span className="text-xs font-medium uppercase">{t("lng")}</span>
       </button>
     </Fragment>
