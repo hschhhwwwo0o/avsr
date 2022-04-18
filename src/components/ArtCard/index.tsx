@@ -11,8 +11,10 @@ const ArtCard: FunctionComponent = () => {
             alt=""
           />
         </div>
-        <div className="mt-6 truncate">
-          <span className="uppercase text-xl font-semibold">a brief inquiry into online relationships</span>
+        <div className="mt-6">
+          <span className="block truncate max-w-[70vw]">
+            <span className="uppercase text-xl font-semibold">a brief inquiry into online relationships</span>
+          </span>
         </div>
         <div className="mt-4 flex flex-row items-center gap-4">
           <div className="w-8 h-8 overflow-hidden rounded-full bg-gray-400">

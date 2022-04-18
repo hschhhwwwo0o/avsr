@@ -12,6 +12,11 @@ const Links: FunctionComponent = () => {
       <li className="text-sm font-medium uppercase hidden md:block">
         <NavLink to="/">{t("Collection")}</NavLink>
       </li>
+      <li className="text-sm font-medium uppercase hidden md:block">
+        <a target="_blank" rel="noopener noreferrer" href="https://www.rarediseasesinternational.org/">
+          RDI
+        </a>
+      </li>
       {User.user.email && (
         <li className="text-sm font-medium uppercase hidden md:block">
           <NavLink to="/generate-poster">{t("Generate Poster")}</NavLink>
