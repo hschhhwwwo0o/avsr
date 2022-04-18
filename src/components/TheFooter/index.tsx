@@ -24,12 +24,19 @@ const TheFooter: FunctionComponent = () => {
               </div>
             </div>
             <div className="md:w-[240px]">
-              <a href="https://unsplash.com/" className="uppercase text-sm font-extrabold cursor-pointer">
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://unsplash.com/"
+                className="uppercase text-sm font-extrabold cursor-pointer"
+              >
                 Unsplash
               </a>
             </div>
             <div className="md:w-0">
               <a
+                target="_blank"
+                rel="noopener noreferrer"
                 href="https://vercel.com/dashboard"
                 className="uppercase whitespace-nowrap text-sm font-extrabold cursor-pointer"
               >
