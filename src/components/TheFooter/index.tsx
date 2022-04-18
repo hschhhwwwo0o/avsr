@@ -13,7 +13,7 @@ const TheFooter: FunctionComponent = () => {
                 A Vision of Something <br /> Random
               </div>
             </div>
-            {/* <div className="md:w-[240px]">
+            <div className="md:w-[240px]">
               <h4 className="uppercase text-sm font-extrabold cursor-pointer text-center md:text-left">
                 <a target="_blank" rel="noopener noreferrer" href="https://www.rarediseasesinternational.org/">
                   RDI
@@ -22,7 +22,7 @@ const TheFooter: FunctionComponent = () => {
               <div className="uppercase text-xs font-semibold mt-2 text-center md:text-left">
                 Rare Diseases <br /> International
               </div>
-            </div> */}
+            </div>
             <div className="md:w-[240px]">
               <a href="https://unsplash.com/" className="uppercase text-sm font-extrabold cursor-pointer">
                 Unsplash
