@@ -4,6 +4,7 @@ import TheLayout from "layouts";
 import Input from "components/Input";
 import Button from "components/Button";
 import { useTranslation } from "react-i18next";
+import { NavLink } from "react-router-dom";
 
 const SignInPage: Page = () => {
   const { t } = useTranslation();
@@ -22,7 +23,10 @@ const SignInPage: Page = () => {
                   <Button w="w-full">{t("Sign in")}</Button>
                 </span>
                 <span className="uppercase text-xs font-semibold">
-                  {t("Don't have an account yet?")} <span className="underline">{t("Create an Account")}</span>
+                  {t("Don't have an account yet?")}{" "}
+                  <NavLink to="/create-an-account" className="underline">
+                    {t("Create an Account")}
+                  </NavLink>
                 </span>
               </div>
             </div>
