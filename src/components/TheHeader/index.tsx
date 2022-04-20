@@ -18,7 +18,7 @@ const TheHeader: FunctionComponent = () => {
                 <LanguageSelect />
               </li>
             </ul>
-            <div className="md:hidden flex items-center justify-center">
+            <div className="flex items-center justify-center md:hidden">
               <Burger />
             </div>
             <div className="hidden items-center justify-center md:flex">
