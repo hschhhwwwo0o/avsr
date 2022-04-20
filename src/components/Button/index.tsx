@@ -8,7 +8,7 @@ interface IButton {
 const Button: FunctionComponent<IButton> = ({ children, w = "" }) => {
   return (
     <Fragment>
-      <button className={`bg-[#252525] text-white uppercase py-4 px-11 font-semibold ${w}`}>{children}</button>
+      <button className={`bg-[#252525] text-white uppercase py-4 px-11 font-semibold text-sm ${w}`}>{children}</button>
     </Fragment>
   );
 };
