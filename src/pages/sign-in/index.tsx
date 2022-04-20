@@ -11,12 +11,12 @@ const SignInPage: Page = () => {
         <div className="flex flex-col-reverse lg:flex-row lg:h-[688px]">
           <div className="flex items-center justify-center lg:w-1/2">
             <div className="w-[432px] pt-8 lg:pt-0">
-              <span className="block uppercase text-center font-bold text-xl">create an account</span>
+              <span className="block uppercase text-center font-bold text-xl">Create an Account</span>
               <div className="grid gap-3 mt-8 lg:mt-14">
                 <Input />
                 <Input />
                 <span className="w-full mt-2">
-                  <Button w="w-full">create an account</Button>
+                  <Button w="w-full">Create an Account</Button>
                 </span>
                 <span className="uppercase text-xs font-semibold">
                   Already have an account? <span className="underline">Sign in</span>
