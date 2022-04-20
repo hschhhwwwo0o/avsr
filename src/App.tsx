@@ -5,6 +5,7 @@ import { initReactI18next } from "react-i18next";
 import en from "localization/en.json";
 import fr from "localization/fr.json";
 import ch from "localization/ch.json";
+import { BrowserRouter } from "react-router-dom";
 
 i18n.use(initReactI18next).init({
   resources: {
@@ -22,7 +23,9 @@ i18n.use(initReactI18next).init({
 const App: FunctionComponent = ({ children }) => {
   return (
     <Fragment>
-      <Router />
+      <BrowserRouter>
+        <Router />
+      </BrowserRouter>
     </Fragment>
   );
 };
