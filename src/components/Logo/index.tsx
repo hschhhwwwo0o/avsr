@@ -1,9 +1,12 @@
 import React, { Fragment, FunctionComponent } from "react";
+import { NavLink } from "react-router-dom";
 
 const Logo: FunctionComponent = () => {
   return (
     <Fragment>
-      <span className="uppercase font-extrabold text-sm">AVSR</span>
+      <NavLink to="/" className="uppercase font-extrabold text-sm relative z-[60]">
+        AVSR
+      </NavLink>
     </Fragment>
   );
 };
