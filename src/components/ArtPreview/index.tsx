@@ -1,5 +1,6 @@
 import Avatar from "components/Avatar";
 import React, { Fragment, FunctionComponent } from "react";
+import { NavLink } from "react-router-dom";
 
 const ArtPreview: FunctionComponent = () => {
   return (
@@ -17,10 +18,10 @@ const ArtPreview: FunctionComponent = () => {
         <div className="lg:w-[30%] h-full flex items-center justify-center px-4 lg:px-16 py-10">
           <div>
             <h2 className="text-2xl lg:text-4xl font-semibold">A Brief Inquiry Into Online Relationships</h2>
-            <div className="flex flex-row gap-4 items-center mt-4">
+            <NavLink to="/user/0" className="flex flex-row gap-4 items-center mt-4">
               <Avatar size="medium" />
               <span className="uppercase font-semibold">itoko toma</span>
-            </div>
+            </NavLink>
           </div>
         </div>
       </div>
