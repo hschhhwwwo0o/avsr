@@ -16,8 +16,8 @@ const SignInPage: Page = () => {
         <AuthLayout>
           <span className="block uppercase text-center font-bold text-xl">{t("Sign in")}</span>
           <div className="grid gap-3 mt-8 lg:mt-14">
-            <Input />
-            <Input />
+            <Input placeholder={t("Enter your email")} />
+            <Input placeholder={t("Enter your password")} />
             <span className="w-full mt-2">
               <Button w="w-full">{t("Sign in")}</Button>
             </span>

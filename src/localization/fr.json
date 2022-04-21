@@ -2,6 +2,9 @@
   "translation": {
     "lng": "fr",
     "More arts by": "Plus d'arts par",
+    "Enter your name": "Entrez votre nom",
+    "Enter your email": "Entrez votre courriel...",
+    "Enter your password": "Entrez votre mot de passe...",
     "Powered by Vercel": "Propulsé par Vercel",
     "Collection": "Collection",
     "Generate Poster": "Générer un poster",

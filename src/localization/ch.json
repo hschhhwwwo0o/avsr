@@ -2,6 +2,9 @@
   "translation": {
     "lng": "ch",
     "More arts by": "更多艺术作品由",
+    "Enter your name": "输入你的名字",
+    "Enter your email": "输入你的电子邮件",
+    "Enter your password": "输入你的密码",
     "Powered by Vercel": "由Vercel提供",
     "Collection": "收藏品",
     "Generate Poster": "生成海报",
