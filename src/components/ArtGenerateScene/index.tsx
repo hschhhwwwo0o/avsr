@@ -1,19 +1,15 @@
-import ArtCreateButton from "components/ArtCreateButton";
-import Button from "components/Button";
-import GenerateArt from "components/GenerateArt";
-import InputArtTitle from "components/InputArtTitle";
 import React, { Fragment, FunctionComponent } from "react";
+import ArtCreateButton from "components/ArtCreateButton";
+import ArtTypeA from "components/GenerateArt/ArtTypeA";
+import InputArtTitle from "components/InputArtTitle";
 
 const ArtGenerateScene: FunctionComponent = () => {
   return (
     <Fragment>
-      <div className="h-[849px] w-full bg-[#FCFCFC] border-[#EAEAEA] border-b flex items-center justify-center">
+      <div className="w-full bg-[#FCFCFC] border-[#EAEAEA] border-b flex items-center justify-center h-[140vw] lg:h-[949px]">
         <div>
-          <div className="w-[80vw] h-[80vw] border-[#EAEAEA] border bg-white flex items-center justify-center p-16 lg:w-[642px] lg:h-[642px]">
-            <Button>Generate</Button>
-            {/* {<GenerateArt />} */}
-          </div>
-          <div className="w-full flex flex-row">
+          <ArtTypeA />
+          <div className="w-full flex flex-col lg:flex-row">
             <InputArtTitle />
             <ArtCreateButton />
           </div>

@@ -1,9 +1,18 @@
 import React, { Fragment, FunctionComponent } from "react";
 
-const ArtCreateButton: FunctionComponent = () => {
+interface IArtCreateButton {
+  onClickHandler?: () => any;
+}
+
+const ArtCreateButton: FunctionComponent<IArtCreateButton> = ({ onClickHandler = () => {} }) => {
   return (
     <Fragment>
-      <button className="px-8 bg-white border-[#EAEAEA] border-r border-b text-sm uppercase">Create</button>
+      <button
+        onClick={onClickHandler}
+        className="px-8 bg-white border-[#EAEAEA] border-r border-l border-b text-sm uppercase py-3 lg:py-0"
+      >
+        Create
+      </button>
     </Fragment>
   );
 };
