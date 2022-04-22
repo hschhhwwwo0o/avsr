@@ -10,7 +10,9 @@ export interface IUser {
 }
 
 export interface IPoster {
+  _id: string;
   title: string;
   userId: string;
+  user: IUser;
   image: string;
 }

@@ -21,16 +21,18 @@ const UserName: FunctionComponent = () => {
 
   return (
     <Fragment>
-      {isMyUser ? (
-        <input
-          placeholder="Enter your name..."
-          className="uppercase font-bold text-xl mt-7 outline-none text-center bg-white"
-          value={username}
-          onChange={e => setUsername(e.target.value)}
-        />
-      ) : (
-        <span className="uppercase font-bold text-xl mt-7">{username}</span>
-      )}
+      <span className="h-0 pb-16">
+        {isMyUser ? (
+          <input
+            placeholder="Enter your name..."
+            className="uppercase font-bold text-xl mt-7 outline-none text-center bg-white"
+            value={username}
+            onChange={e => setUsername(e.target.value)}
+          />
+        ) : (
+          <span className="uppercase font-bold text-xl mt-7">{username}</span>
+        )}
+      </span>
     </Fragment>
   );
 };

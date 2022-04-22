@@ -1,22 +1,24 @@
 import { QueryClient, useMutation, useQuery, useQueryClient } from "react-query";
-import { useLocation, Location, useParams, Params } from "react-router-dom";
+import { useParams, Params } from "react-router-dom";
 import { apiClient } from "utils/apiClient";
 
 function useUserData() {
-  const location: Location = useLocation();
   const params: Readonly<Params<string>> = useParams();
   const queryClient: QueryClient = useQueryClient();
 
-  const userResponse = useQuery(["getUser", location], async () => {
+  const userResponse = useQuery(["getUser", params?.id], async () => {
     const userId: string = params.id || "";
     const data = await apiClient.service("users").get(userId);
     return data;
   });
 
-  const postersResponse = useQuery(["getUserPosters", location], async () => {
+  const postersResponse = useQuery(["getUserPosters", params?.id], async () => {
     const userId: string = params.id || "";
     const data = await apiClient.service("posters").find({
       query: {
+        $sort: {
+          createdAt: -1,
+        },
         userId,
       },
     });

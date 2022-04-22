@@ -1,4 +1,4 @@
-import React, { Fragment, FunctionComponent } from "react";
+import React, { Fragment, FunctionComponent, useState } from "react";
 import { useGeneratePosterMockupImage } from "hooks/useGeneratePosterMockupImage";
 import { useTranslation } from "react-i18next";
 import TheFooter from "components/TheFooter";
@@ -8,10 +8,20 @@ import PosterTypeA from "components/_pages/generate-poster/GeneratePoster/Poster
 import InputPosterTitle from "components/_pages/generate-poster/InputPosterTitle";
 import GeneratedPosterPreview from "components/_pages/generate-poster/GeneratePoster/GeneratedPosterPreview";
 import RegeneartePosterPreviewButton from "components/_pages/generate-poster/RegeneartePosterPreviewButton";
+import { useCreatePoster } from "hooks/useCreatePoster";
+import User from "store/User";
 
 const PosterGenerateScene: FunctionComponent = () => {
   const { posterArch, image, isGenerated, isLoading, onGeneratePosterMockupImage } = useGeneratePosterMockupImage();
+  const { postersServiceMutation } = useCreatePoster();
   const { t } = useTranslation();
+  const [title, setTitle] = useState<string>("");
+
+  function onCreate(): void {
+    if (title) {
+      postersServiceMutation.mutate({ image, title, userId: User.user.id });
+    }
+  }
 
   return (
     <Fragment>
@@ -20,9 +30,9 @@ const PosterGenerateScene: FunctionComponent = () => {
           {isGenerated && <GeneratedPosterPreview image={image} />}
           {isGenerated && (
             <div className="w-full flex flex-col lg:flex-row">
-              <InputPosterTitle />
+              <InputPosterTitle state={title} setState={setTitle} />
               <RegeneartePosterPreviewButton onClickHandler={onGeneratePosterMockupImage} />
-              <PosterCreateButton />
+              <PosterCreateButton onClickHandler={onCreate} />
             </div>
           )}
           {isLoading && <Button>{t("Please wait")}</Button>}
