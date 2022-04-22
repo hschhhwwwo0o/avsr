@@ -17,7 +17,7 @@ const UserPosters: FunctionComponent = () => {
             })}
           </Grid>
         ) : (
-          <span className="block text-center">Oops</span>
+          <span className="block text-center"></span>
         )}
       </GridLayout>
     </Fragment>
