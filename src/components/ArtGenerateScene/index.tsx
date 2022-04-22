@@ -1,34 +1,15 @@
-import React, { Fragment, FunctionComponent, useState } from "react";
+import React, { Fragment, FunctionComponent } from "react";
 import ArtCreateButton from "components/ArtCreateButton";
 import ArtTypeA from "components/GenerateArt/ArtTypeA";
 import InputArtTitle from "components/InputArtTitle";
-import { useGenerateArtTypeA } from "hooks/useGenerateArtTypeA";
 import Button from "components/Button";
-import DomToImage from "dom-to-image";
 import GeneratedArtPreview from "components/GenerateArt/GeneratedArtPreview";
 import TheFooter from "components/TheFooter";
 import RegenearteArtButton from "components/RegenearteArtButton";
+import { useGenerateArt } from "hooks/useGenerateArt";
 
 const ArtGenerateScene: FunctionComponent = () => {
-  const [artTypeA, setArtTypeA] = useState<any>();
-  const [image, setImage] = useState<string>("");
-  const [isGenerated, setIsGenerated] = useState<boolean>(false);
-  const [isLoading, setIsLoading] = useState<boolean>(false);
-
-  async function onGenerateArt(): Promise<void> {
-    setIsLoading(true);
-    setIsGenerated(false);
-    setArtTypeA(useGenerateArtTypeA());
-    setTimeout(async () => {
-      const poster: Element | null = document.querySelector("#_POSTER");
-      if (poster) {
-        const image: string = await DomToImage.toPng(poster);
-        setImage(image);
-        setIsGenerated(true);
-      }
-      setIsLoading(false);
-    }, 1200);
-  }
+  const { artTypeA, image, isGenerated, isLoading, onGenerateArt } = useGenerateArt();
 
   return (
     <Fragment>
