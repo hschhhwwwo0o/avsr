@@ -25,7 +25,7 @@ const ArtGenerateScene: FunctionComponent = () => {
               <ArtCreateButton />
             </div>
           )}
-          {isLoading && <Button>Please wait...</Button>}
+          {isLoading && <Button>{t("Please wait")}</Button>}
           {!isGenerated && !isLoading && <Button onClickHandler={onGenerateArt}>{t("Generate")}</Button>}
         </div>
       </div>
