@@ -1,8 +1,8 @@
 import React, { Fragment, FunctionComponent } from "react";
 import { useTranslation } from "react-i18next";
 import GridLayout from "layouts/GridLayout";
-import PosterCard from "components/PosterCard";
 import Grid from "components/Grid";
+import PosterCard from "components/PosterCard";
 
 const MorePostersBy: FunctionComponent = () => {
   const { t } = useTranslation();
