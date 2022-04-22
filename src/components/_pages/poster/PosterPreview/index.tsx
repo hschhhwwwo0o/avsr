@@ -24,15 +24,15 @@ const PosterPreview: FunctionComponent = () => {
           {posterResponse?.data?.posterResponse && (
             <div className="w-full">
               <h2 className="text-2xl font-semibold lg:text-4xl uppercase">
-                {posterResponse?.data?.posterResponse.title}
+                {posterResponse?.data?.posterResponse?.title}
               </h2>
               <NavLink
-                to={`/user/${posterResponse?.data?.morePosterResponse?.data[0].user._id}`}
+                to={`/user/${posterResponse?.data?.morePosterResponse?.data[0]?.user?._id}`}
                 className="flex flex-row gap-4 items-center mt-4"
               >
-                <Avatar size="medium" string={posterResponse?.data?.morePosterResponse?.data[0].user.name} />
+                <Avatar size="medium" string={posterResponse?.data?.morePosterResponse?.data[0]?.user?.name} />
                 <span className="uppercase font-semibold">
-                  {posterResponse?.data?.morePosterResponse?.data[0].user.name}
+                  {posterResponse?.data?.morePosterResponse?.data[0]?.user?.name}
                 </span>
               </NavLink>
             </div>
