@@ -1,8 +1,8 @@
 import React, { Fragment } from "react";
 import { Page } from "types";
 import TheLayout from "layouts";
-import ArtPreview from "components/ArtPreview";
-import MoreArtsBy from "components/MoreArtsBy";
+import ArtPreview from "components/_pages/poster/ArtPreview";
+import MoreArtsBy from "components/_pages/poster/MoreArtsBy";
 
 const PosterPage: Page = () => {
   return (

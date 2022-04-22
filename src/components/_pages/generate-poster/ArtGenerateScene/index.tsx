@@ -1,13 +1,13 @@
 import React, { Fragment, FunctionComponent } from "react";
 import { useGenerateArt } from "hooks/useGenerateArt";
 import { useTranslation } from "react-i18next";
-import ArtCreateButton from "components/ArtCreateButton";
-import ArtTypeA from "components/GenerateArt/ArtTypeA";
-import InputArtTitle from "components/InputArtTitle";
-import Button from "components/Button";
-import GeneratedArtPreview from "components/GenerateArt/GeneratedArtPreview";
 import TheFooter from "components/TheFooter";
-import RegenearteArtButton from "components/RegenearteArtButton";
+import Button from "components/Button";
+import ArtCreateButton from "components/_pages/generate-poster/ArtCreateButton";
+import ArtTypeA from "components/_pages/generate-poster/GenerateArt/ArtTypeA";
+import InputArtTitle from "components/_pages/generate-poster/InputArtTitle";
+import GeneratedArtPreview from "components/_pages/generate-poster/GenerateArt/GeneratedArtPreview";
+import RegenearteArtButton from "components/_pages/generate-poster/RegenearteArtButton";
 
 const ArtGenerateScene: FunctionComponent = () => {
   const { artTypeA, image, isGenerated, isLoading, onGenerateArt } = useGenerateArt();
