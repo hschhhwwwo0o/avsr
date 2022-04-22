@@ -75,7 +75,7 @@ const ArtTypeA: FunctionComponent<IArtTypeA> = ({
             {isCenteredTextBlock && (
               <span className={`block w-[calc(742px-96px)] h-[calc(742px-96px)] -mt-[calc(742px-96px)]`}>
                 <span
-                  className={`h-full w-full flex flex-${centeredDirection} items-center justify-center font-semiboldy text-[100px] overflow-hidden`}
+                  className={`h-full w-full flex flex-${centeredDirection} items-center justify-center font-semibold text-[100px] overflow-hidden`}
                 >
                   {(centeredTextsCount >= 1 || centeredDirection === "row") && (
                     <span className="block text-white mix-blend-difference uppercase">{centeredText}</span>
