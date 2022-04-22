@@ -1,6 +1,8 @@
 {
   "translation": {
     "lng": "ch",
+    "Users don't have posters": "用户没有海报",
+    "You don't seem to have any posters": "你似乎没有任何海报",
     "Please wait": "请等待...",
     "Create": "创建",
     "Regenerate": "再生",

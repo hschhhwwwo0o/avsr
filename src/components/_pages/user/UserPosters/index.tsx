@@ -1,8 +1,10 @@
 import React, { Fragment, FunctionComponent } from "react";
+import { useParams } from "react-router-dom";
+import { useUserData } from "hooks/useUserData";
 import GridLayout from "layouts/GridLayout";
 import PosterCard from "components/PosterCard";
 import Grid from "components/Grid";
-import { useUserData } from "hooks/useUserData";
+import EmptyPosters from "../EmptyPosters";
 
 const UserPosters: FunctionComponent = () => {
   const { postersResponse } = useUserData();
@@ -17,7 +19,7 @@ const UserPosters: FunctionComponent = () => {
             })}
           </Grid>
         ) : (
-          <span className="block text-center"></span>
+          <EmptyPosters id={useParams()?.id || ""} />
         )}
       </GridLayout>
     </Fragment>

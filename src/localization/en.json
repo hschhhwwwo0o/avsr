@@ -2,6 +2,8 @@
   "translation": {
     "lng": "en",
     "Please wait": "Please wait...",
+    "Users don't have posters": "Users don't have posters",
+    "You don't seem to have any posters": "You don't seem to have any posters",
     "Create": "Create",
     "Regenerate": "Regenerate",
     "Generate": "Generate",

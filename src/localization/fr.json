@@ -1,6 +1,8 @@
 {
   "translation": {
     "lng": "fr",
+    "Users don't have posters": "Les utilisateurs n'ont pas d'affiches",
+    "You don't seem to have any posters": "Vous ne semblez pas avoir d'affiches",
     "Please wait": "Veuillez patienter...",
     "Create": "Créer",
     "Regenerate": "Régénérer",
