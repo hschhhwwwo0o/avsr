@@ -1,8 +1,8 @@
-import ArtCard from "components/ArtCard";
-import Grid from "components/Grid";
-import GridLayout from "layouts/GridLayout";
 import React, { Fragment, FunctionComponent } from "react";
 import { useTranslation } from "react-i18next";
+import GridLayout from "layouts/GridLayout";
+import ArtCard from "components/ArtCard";
+import Grid from "components/Grid";
 
 const MoreArtsBy: FunctionComponent = () => {
   const { t } = useTranslation();

@@ -1,11 +1,11 @@
 import React, { Fragment } from "react";
 import { Page } from "types";
+import { useTranslation } from "react-i18next";
 import TheLayout from "layouts";
+import AuthLayout from "layouts/AuthLayout";
+import { NavLink } from "react-router-dom";
 import Input from "components/Input";
 import Button from "components/Button";
-import { useTranslation } from "react-i18next";
-import { NavLink } from "react-router-dom";
-import AuthLayout from "layouts/AuthLayout";
 
 const CreateAnAccountPage: Page = () => {
   const { t } = useTranslation();

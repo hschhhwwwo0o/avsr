@@ -1,4 +1,5 @@
 import React, { Fragment, FunctionComponent } from "react";
+import { useGenerateArt } from "hooks/useGenerateArt";
 import ArtCreateButton from "components/ArtCreateButton";
 import ArtTypeA from "components/GenerateArt/ArtTypeA";
 import InputArtTitle from "components/InputArtTitle";
@@ -6,7 +7,6 @@ import Button from "components/Button";
 import GeneratedArtPreview from "components/GenerateArt/GeneratedArtPreview";
 import TheFooter from "components/TheFooter";
 import RegenearteArtButton from "components/RegenearteArtButton";
-import { useGenerateArt } from "hooks/useGenerateArt";
 
 const ArtGenerateScene: FunctionComponent = () => {
   const { artTypeA, image, isGenerated, isLoading, onGenerateArt } = useGenerateArt();

@@ -1,6 +1,6 @@
 import React, { Fragment, FunctionComponent } from "react";
-import PoweredByVercel from "components/PoweredByVercel";
 import { NavLink } from "react-router-dom";
+import PoweredByVercel from "components/PoweredByVercel";
 
 const TheFooter: FunctionComponent = () => {
   return (

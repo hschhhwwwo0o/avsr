@@ -1,7 +1,7 @@
-import ArtGenerateScene from "components/ArtGenerateScene";
-import TheLayout from "layouts";
 import React, { Fragment } from "react";
 import { Page } from "types";
+import TheLayout from "layouts";
+import ArtGenerateScene from "components/ArtGenerateScene";
 
 const GeneratePosterPage: Page = () => {
   return (

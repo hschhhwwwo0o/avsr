@@ -1,6 +1,6 @@
-import Avatar from "components/Avatar";
 import React, { Fragment, FunctionComponent } from "react";
 import { NavLink } from "react-router-dom";
+import Avatar from "components/Avatar";
 
 const ArtPreview: FunctionComponent = () => {
   return (

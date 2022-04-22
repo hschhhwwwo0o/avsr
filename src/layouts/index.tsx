@@ -1,7 +1,7 @@
 import React, { Fragment, FunctionComponent } from "react";
+import GridLayout from "layouts/GridLayout";
 import TheFooter from "components/TheFooter";
 import TheHeader from "components/TheHeader";
-import GridLayout from "layouts/GridLayout";
 
 interface ITheLayout {
   withMainLayout?: boolean;

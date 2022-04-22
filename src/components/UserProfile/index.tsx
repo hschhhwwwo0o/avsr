@@ -1,5 +1,5 @@
-import Avatar from "components/Avatar";
 import React, { Fragment, FunctionComponent } from "react";
+import Avatar from "components/Avatar";
 
 const UserProfile: FunctionComponent = () => {
   return (
