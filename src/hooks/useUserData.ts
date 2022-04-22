@@ -1,10 +1,10 @@
-import { useMutation, useQuery, useQueryClient } from "react-query";
+import { QueryClient, useMutation, useQuery, useQueryClient } from "react-query";
 import { useLocation, Location } from "react-router-dom";
 import { apiClient } from "utils/apiClient";
 
 function useUserData() {
   const location: Location = useLocation();
-  const queryClient = useQueryClient();
+  const queryClient: QueryClient = useQueryClient();
 
   const userResponse = useQuery(["getUser", location], async () => {
     const userId: string = location.pathname.replace("/user/", "");
