@@ -12,14 +12,6 @@ const HomePage: Page = () => {
           <ArtCard />
           <ArtCard />
           <ArtCard />
-          <ArtCard />
-          <ArtCard />
-          <ArtCard />
-          <ArtCard />
-          <ArtCard />
-          <ArtCard />
-          <ArtCard />
-          <ArtCard />
         </Grid>
       </div>
     </TheLayout>

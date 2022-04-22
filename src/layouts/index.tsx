@@ -11,10 +11,14 @@ interface ITheLayout {
 const TheLayout: FunctionComponent<ITheLayout> = ({ children, withMainLayout = true, withFooter = true }) => {
   return (
     <Fragment>
-      <TheHeader />
-      {withMainLayout && <GridLayout>{children}</GridLayout>}
-      {!withMainLayout && children}
-      {withFooter && <TheFooter />}
+      <div className="h-screen flex flex-col justify-between">
+        <div>
+          <TheHeader />
+          {withMainLayout && <GridLayout>{children}</GridLayout>}
+          {!withMainLayout && children}
+        </div>
+        {withFooter && <TheFooter />}
+      </div>
     </Fragment>
   );
 };

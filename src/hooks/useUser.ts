@@ -14,7 +14,11 @@ function useUser() {
 
   const postersResponse = useQuery(["getUserPosters", location], async () => {
     const userId: string = location.pathname.replace("/user/", "");
-    const data = await apiClient.service("users").get(userId);
+    const data = await apiClient.service("posters").find({
+      query: {
+        userId,
+      },
+    });
     return data;
   });
 
@@ -27,6 +31,7 @@ function useUser() {
 
   return {
     userResponse,
+    postersResponse,
     userMutation,
   };
 }
