@@ -8,7 +8,7 @@ function useGeneratePoster() {
   const [isGenerated, setIsGenerated] = useState<boolean>(false);
   const [isLoading, setIsLoading] = useState<boolean>(false);
 
-  async function onGenerateArt(): Promise<void> {
+  async function onGeneratePoster(): Promise<void> {
     setIsLoading(true);
     setIsGenerated(false);
     setPosterTypeA(useGeneratePosterTypeA());
@@ -28,7 +28,7 @@ function useGeneratePoster() {
     image,
     isGenerated,
     isLoading,
-    onGenerateArt,
+    onGeneratePoster,
   };
 }
 
