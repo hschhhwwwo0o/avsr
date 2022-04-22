@@ -1,5 +1,6 @@
 import React, { Fragment, FunctionComponent } from "react";
 import { useGenerateArt } from "hooks/useGenerateArt";
+import { useTranslation } from "react-i18next";
 import ArtCreateButton from "components/ArtCreateButton";
 import ArtTypeA from "components/GenerateArt/ArtTypeA";
 import InputArtTitle from "components/InputArtTitle";
@@ -10,6 +11,7 @@ import RegenearteArtButton from "components/RegenearteArtButton";
 
 const ArtGenerateScene: FunctionComponent = () => {
   const { artTypeA, image, isGenerated, isLoading, onGenerateArt } = useGenerateArt();
+  const { t } = useTranslation();
 
   return (
     <Fragment>
@@ -24,7 +26,7 @@ const ArtGenerateScene: FunctionComponent = () => {
             </div>
           )}
           {isLoading && <Button>Please wait...</Button>}
-          {!isGenerated && !isLoading && <Button onClickHandler={onGenerateArt}>Generate</Button>}
+          {!isGenerated && !isLoading && <Button onClickHandler={onGenerateArt}>{t("Generate")}</Button>}
         </div>
       </div>
       <TheFooter />

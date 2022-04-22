@@ -1,4 +1,5 @@
 import React, { Dispatch, Fragment, FunctionComponent, SetStateAction } from "react";
+import { useTranslation } from "react-i18next";
 
 interface IInputArtTitle {
   state?: string;
@@ -6,6 +7,8 @@ interface IInputArtTitle {
 }
 
 const InputArtTitle: FunctionComponent<IInputArtTitle> = ({ state, setState = () => {} }) => {
+  const { t } = useTranslation();
+
   return (
     <Fragment>
       <input
@@ -13,7 +16,7 @@ const InputArtTitle: FunctionComponent<IInputArtTitle> = ({ state, setState = ()
         value={state}
         onChange={e => setState(e.target.value)}
         className="w-full bg-[#252525] uppercase placeholder-white px-4 py-3 text-white outline-none text-sm text-center lg:text-left"
-        placeholder="Enter Title"
+        placeholder={t("Enter Title")}
       />
     </Fragment>
   );

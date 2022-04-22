@@ -1,6 +1,10 @@
 {
   "translation": {
     "lng": "ch",
+    "Create": "创建",
+    "Regenerate": "再生",
+    "Generate": "生成",
+    "Enter Title": "输入标题",
     "More arts by": "更多艺术作品由",
     "Enter your name": "输入你的名字",
     "Enter your email": "输入你的电子邮件",

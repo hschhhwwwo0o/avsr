@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useGenerateArtTypeA } from "./useGenerateArtTypeA";
+import DomToImage from "dom-to-image";
 
 function useGenerateArt() {
   const [artTypeA, setArtTypeA] = useState<any>();

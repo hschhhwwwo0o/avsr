@@ -1,6 +1,10 @@
 {
   "translation": {
     "lng": "en",
+    "Create": "Create",
+    "Regenerate": "Regenerate",
+    "Generate": "Generate",
+    "Enter Title": "Enter Title",
     "More arts by": "More arts by",
     "Enter your name": "Enter your name",
     "Enter your email": "Enter your email...",
