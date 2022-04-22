@@ -1,10 +1,10 @@
 import React, { Fragment, FunctionComponent } from "react";
 
-interface IGeneratedArtPreview {
+interface IGeneratedPosterPreview {
   image?: string;
 }
 
-const GeneratedArtPreview: FunctionComponent<IGeneratedArtPreview> = ({ image = "" }) => {
+const GeneratedPosterPreview: FunctionComponent<IGeneratedPosterPreview> = ({ image = "" }) => {
   return (
     <Fragment>
       <div className="flex overflow-hidden w-[80vw] h-[80vw] select-none border-[#EAEAEA] border bg-white flex-col items-center justify-center lg:w-[642px] lg:h-[642px]">
@@ -20,4 +20,4 @@ const GeneratedArtPreview: FunctionComponent<IGeneratedArtPreview> = ({ image = 
   );
 };
 
-export default GeneratedArtPreview;
+export default GeneratedPosterPreview;

@@ -1,6 +1,6 @@
 import React, { Fragment, FunctionComponent } from "react";
 import GridLayout from "layouts/GridLayout";
-import ArtCard from "components/ArtCard";
+import PosterCard from "components/PosterCard";
 import Grid from "components/Grid";
 import { useUser } from "hooks/useUser";
 
@@ -13,7 +13,7 @@ const UserPosters: FunctionComponent = () => {
         {postersResponse?.data?.data?.length ? (
           <Grid>
             {postersResponse.data.data.map((poster: any) => {
-              return <ArtCard />;
+              return <PosterCard />;
             })}
           </Grid>
         ) : (

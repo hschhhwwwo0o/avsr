@@ -1,6 +1,6 @@
 import React, { Fragment, FunctionComponent } from "react";
 
-interface IArtTypeA {
+interface IPosterTypeA {
   bgColor: string;
   title: string;
   subTitle: string;
@@ -16,7 +16,7 @@ interface IArtTypeA {
   isTextBottom: boolean;
 }
 
-const ArtTypeA: FunctionComponent<IArtTypeA> = ({
+const PosterTypeA: FunctionComponent<IPosterTypeA> = ({
   bgColor,
   title,
   subTitle,
@@ -102,4 +102,4 @@ const ArtTypeA: FunctionComponent<IArtTypeA> = ({
   );
 };
 
-export default ArtTypeA;
+export default PosterTypeA;

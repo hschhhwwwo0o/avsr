@@ -1,11 +1,11 @@
 import React, { Fragment, FunctionComponent } from "react";
 import { useTranslation } from "react-i18next";
 
-interface IArtCreateButton {
+interface IPosterCreateButton {
   onClickHandler?: () => any;
 }
 
-const ArtCreateButton: FunctionComponent<IArtCreateButton> = ({ onClickHandler = () => {} }) => {
+const PosterCreateButton: FunctionComponent<IPosterCreateButton> = ({ onClickHandler = () => {} }) => {
   const { t } = useTranslation();
 
   return (
@@ -20,4 +20,4 @@ const ArtCreateButton: FunctionComponent<IArtCreateButton> = ({ onClickHandler =
   );
 };
 
-export default ArtCreateButton;
+export default PosterCreateButton;

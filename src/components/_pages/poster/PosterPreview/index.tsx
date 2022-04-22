@@ -2,7 +2,7 @@ import React, { Fragment, FunctionComponent } from "react";
 import { NavLink } from "react-router-dom";
 import Avatar from "components/Avatar";
 
-const ArtPreview: FunctionComponent = () => {
+const PosterPreview: FunctionComponent = () => {
   return (
     <Fragment>
       <div className="w-full flex flex-col lg:h-[849px] lg:flex-row">
@@ -29,4 +29,4 @@ const ArtPreview: FunctionComponent = () => {
   );
 };
 
-export default ArtPreview;
+export default PosterPreview;

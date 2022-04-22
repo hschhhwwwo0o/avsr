@@ -1,9 +1,9 @@
 import { useState } from "react";
-import { useGenerateArtTypeA } from "./useGenerateArtTypeA";
+import { useGeneratePosterTypeA } from "./useGeneratePosterTypeA";
 import DomToImage from "dom-to-image";
 
-function useGenerateArt() {
-  const [artTypeA, setArtTypeA] = useState<any>();
+function useGeneratePoster() {
+  const [posterTypeA, setPosterTypeA] = useState<any>();
   const [image, setImage] = useState<string>("");
   const [isGenerated, setIsGenerated] = useState<boolean>(false);
   const [isLoading, setIsLoading] = useState<boolean>(false);
@@ -11,7 +11,7 @@ function useGenerateArt() {
   async function onGenerateArt(): Promise<void> {
     setIsLoading(true);
     setIsGenerated(false);
-    setArtTypeA(useGenerateArtTypeA());
+    setPosterTypeA(useGeneratePosterTypeA());
     setTimeout(async () => {
       const poster: Element | null = document.querySelector("#_POSTER");
       if (poster) {
@@ -24,7 +24,7 @@ function useGenerateArt() {
   }
 
   return {
-    artTypeA,
+    posterTypeA,
     image,
     isGenerated,
     isLoading,
@@ -32,4 +32,4 @@ function useGenerateArt() {
   };
 }
 
-export { useGenerateArt };
+export { useGeneratePoster };

@@ -1,12 +1,12 @@
 import React, { Dispatch, Fragment, FunctionComponent, SetStateAction } from "react";
 import { useTranslation } from "react-i18next";
 
-interface IInputArtTitle {
+interface IInputPosterTitle {
   state?: string;
   setState?: Dispatch<SetStateAction<string>>;
 }
 
-const InputArtTitle: FunctionComponent<IInputArtTitle> = ({ state, setState = () => {} }) => {
+const InputPosterTitle: FunctionComponent<IInputPosterTitle> = ({ state, setState = () => {} }) => {
   const { t } = useTranslation();
 
   return (
@@ -22,4 +22,4 @@ const InputArtTitle: FunctionComponent<IInputArtTitle> = ({ state, setState = ()
   );
 };
 
-export default InputArtTitle;
+export default InputPosterTitle;

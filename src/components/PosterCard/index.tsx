@@ -2,7 +2,7 @@ import Avatar from "components/Avatar";
 import React, { Fragment, FunctionComponent } from "react";
 import { NavLink } from "react-router-dom";
 
-const ArtCard: FunctionComponent = () => {
+const PosterCard: FunctionComponent = () => {
   return (
     <Fragment>
       <NavLink to={"/poster/0"} className="ART">
@@ -29,4 +29,4 @@ const ArtCard: FunctionComponent = () => {
   );
 };
 
-export default ArtCard;
+export default PosterCard;

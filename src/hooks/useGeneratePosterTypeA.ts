@@ -1,4 +1,4 @@
-function useGenerateArtTypeA() {
+function useGeneratePosterTypeA() {
   const bgColors: string[] = ["#252525", "#FFFFFF"];
   const secondBlockColors: string[] = ["#ABFB45", "#FB4591"];
   const titles: string[] = ["LIFE WITH A RARE DISEASE", "300 million Persons", "Rare Disease worldwide"];
@@ -53,4 +53,4 @@ function useGenerateArtTypeA() {
   };
 }
 
-export { useGenerateArtTypeA };
+export { useGeneratePosterTypeA };

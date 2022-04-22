@@ -1,10 +1,10 @@
 import React, { Fragment, FunctionComponent } from "react";
 import { useTranslation } from "react-i18next";
 import GridLayout from "layouts/GridLayout";
-import ArtCard from "components/ArtCard";
+import PosterCard from "components/PosterCard";
 import Grid from "components/Grid";
 
-const MoreArtsBy: FunctionComponent = () => {
+const MorePostersBy: FunctionComponent = () => {
   const { t } = useTranslation();
 
   return (
@@ -12,13 +12,13 @@ const MoreArtsBy: FunctionComponent = () => {
       <div className="py-10 text-center uppercase font-semibold">{t("More arts by")} Itoko Toma</div>
       <GridLayout>
         <Grid>
-          <ArtCard />
-          <ArtCard />
-          <ArtCard />
+          <PosterCard />
+          <PosterCard />
+          <PosterCard />
         </Grid>
       </GridLayout>
     </Fragment>
   );
 };
 
-export default MoreArtsBy;
+export default MorePostersBy;
