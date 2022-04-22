@@ -1,10 +1,12 @@
 import React, { Fragment, FunctionComponent } from "react";
 
 interface IAvatar {
+  string?: string;
+  image?: string;
   size?: "small" | "medium" | "big";
 }
 
-const Avatar: FunctionComponent<IAvatar> = ({ size = "small" }) => {
+const Avatar: FunctionComponent<IAvatar> = ({ size = "small", image = "", string = "un" }) => {
   function returnSize(): string {
     if (size === "small") return "w-[34px] h-[34px]";
     if (size === "medium") return "w-[40px] h-[40px] lg:w-[51px] lg:h-[51px]";
@@ -12,13 +14,21 @@ const Avatar: FunctionComponent<IAvatar> = ({ size = "small" }) => {
     return "w-[34px] h-[34px]";
   }
 
+  function returnTextSize(): string {
+    if (size === "small") return "text-sm";
+    if (size === "medium") return "text";
+    if (size === "big") return "text-lg";
+    return "w-[34px] h-[34px]";
+  }
+
   return (
     <Fragment>
-      <div className={`${returnSize()} overflow-hidden rounded-full`}>
-        <img
-          src="https://images.unsplash.com/photo-1553272725-086100aecf5e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=765&q=80"
-          alt=""
-        />
+      <div className={`${returnSize()} bg-[#252525] overflow-hidden rounded-full flex items-center justify-center`}>
+        {image ? (
+          <img src={image} alt="" />
+        ) : (
+          <span className={`${returnTextSize()} text-white uppercase font-bold`}>{string.slice(0, 2)}</span>
+        )}
       </div>
     </Fragment>
   );

@@ -1,6 +1,6 @@
-import { useApiClient } from "hooks/useApiClient";
-import { makeAutoObservable } from "mobx";
+import { makeAutoObservable, runInAction } from "mobx";
 import { IUser } from "types";
+import { apiClient } from "utils/apiClient";
 
 class User {
   constructor() {
@@ -11,6 +11,7 @@ class User {
     email: "",
     name: "",
     image: "",
+    id: "",
   };
 
   private clearState(): void {
@@ -18,12 +19,12 @@ class User {
       email: "",
       name: "",
       image: "",
+      id: "",
     };
   }
 
   public async createUser({ name, email, password }: { name: string; email: string; password: string }): Promise<void> {
     try {
-      const { apiClient } = useApiClient();
       await apiClient.service("users").create({ name, email, password });
       await this.signInUser({ email, password });
     } catch (error) {
@@ -34,7 +35,6 @@ class User {
 
   public async signInUser({ email, password }: { email: string; password: string }): Promise<void> {
     try {
-      const { apiClient } = useApiClient();
       const response = await apiClient.authenticate({
         strategy: "local",
         email,
@@ -48,8 +48,11 @@ class User {
 
   public async reAuthenticateUser(): Promise<void> {
     try {
-      const { apiClient } = useApiClient();
-      await apiClient.reAuthenticate();
+      const { user } = await apiClient.reAuthenticate();
+      runInAction(() => {
+        this.user.email = user.email;
+        this.user.id = user._id;
+      });
     } catch (error) {
       this.clearState();
       console.error(error);
