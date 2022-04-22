@@ -8,6 +8,7 @@ function useHomeGetPosters() {
         $sort: {
           createdAt: -1,
         },
+        $limit: 100,
       },
     });
     return data;
