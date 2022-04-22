@@ -15,16 +15,21 @@ const ArtTypeA: FunctionComponent = () => {
     centeredText,
     centeredTextsCount,
     centeredDirection,
+    isTextBottom,
   } = useGenerateArtTypeA();
 
   return (
     <Fragment>
-      <div className="w-[80vw] h-[80vw] border-[#EAEAEA] border bg-white flex flex-col items-center justify-center lg:w-[742px] lg:h-[742px]">
+      <div className="w-[80vw] h-[80vw] select-none border-[#EAEAEA] border bg-white flex flex-col items-center justify-center lg:w-[742px] lg:h-[742px]">
         <div
           id="_POSTER"
           className={`w-[calc(80vw)] h-[calc(80vw)] lg:w-[calc(742px-96px)] border-[#EAEAEA] border lg:h-[calc(742px-96px)] flex-shrink-0 bg-[${bgColor}]`}
         >
-          <span className="flex flex-col justify-between w-[calc(80vw)] h-[calc(80vw)] lg:w-[calc(742px-96px)] lg:h-[calc(742px-96px)] p-4 lg:p-12">
+          <span
+            className={`flex flex-col ${
+              isTextBottom && "justify-end relative z-50"
+            } w-[calc(80vw)] h-[calc(80vw)] lg:w-[calc(742px-96px)] lg:h-[calc(742px-96px)] p-4 lg:p-12`}
+          >
             <span className="block">
               <span className="block mix-blend-difference text-white font-semibold uppercase text-xl lg:text-3xl">
                 {title}
@@ -56,7 +61,7 @@ const ArtTypeA: FunctionComponent = () => {
                 className={`block h-[60%] object-cover bg-blend-difference px-12 pb-12`}
                 style={{ width: `${imageWidth}%` }}
               >
-                <img src={image} alt="" className={`h-full w-full object-cover`} />
+                <img src={image} alt="" className={`h-full w-full object-cover grayscale`} />
               </span>
             </span>
           </div>
