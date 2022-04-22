@@ -19,7 +19,7 @@ const UserPosters: FunctionComponent = () => {
             })}
           </Grid>
         ) : (
-          <EmptyPosters id={useParams()?.id || ""} />
+          <Fragment>{!postersResponse.isLoading && <EmptyPosters id={useParams()?.id || ""} />}</Fragment>
         )}
       </GridLayout>
     </Fragment>
