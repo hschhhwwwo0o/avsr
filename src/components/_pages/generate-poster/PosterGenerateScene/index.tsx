@@ -1,5 +1,5 @@
 import React, { Fragment, FunctionComponent } from "react";
-import { useGeneratePosterMockupImage } from "hooks/useGeneratePoster";
+import { useGeneratePosterMockupImage } from "hooks/useGeneratePosterMockupImage";
 import { useTranslation } from "react-i18next";
 import TheFooter from "components/TheFooter";
 import Button from "components/Button";
@@ -10,7 +10,7 @@ import GeneratedPosterPreview from "components/_pages/generate-poster/GeneratePo
 import RegeneartePosterPreviewButton from "components/_pages/generate-poster/RegeneartePosterPreviewButton";
 
 const PosterGenerateScene: FunctionComponent = () => {
-  const { posterArch, image, isGenerated, isLoading, onGeneratePoster } = useGeneratePosterMockupImage();
+  const { posterArch, image, isGenerated, isLoading, onGeneratePosterMockupImage } = useGeneratePosterMockupImage();
   const { t } = useTranslation();
 
   return (
@@ -21,12 +21,12 @@ const PosterGenerateScene: FunctionComponent = () => {
           {isGenerated && (
             <div className="w-full flex flex-col lg:flex-row">
               <InputPosterTitle />
-              <RegeneartePosterPreviewButton onClickHandler={onGeneratePoster} />
+              <RegeneartePosterPreviewButton onClickHandler={onGeneratePosterMockupImage} />
               <PosterCreateButton />
             </div>
           )}
           {isLoading && <Button>{t("Please wait")}</Button>}
-          {!isGenerated && !isLoading && <Button onClickHandler={onGeneratePoster}>{t("Generate")}</Button>}
+          {!isGenerated && !isLoading && <Button onClickHandler={onGeneratePosterMockupImage}>{t("Generate")}</Button>}
         </div>
       </div>
       <TheFooter />

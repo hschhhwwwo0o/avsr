@@ -8,7 +8,7 @@ function useGeneratePosterMockupImage() {
   const [isGenerated, setIsGenerated] = useState<boolean>(false);
   const [isLoading, setIsLoading] = useState<boolean>(false);
 
-  async function onGeneratePoster(): Promise<void> {
+  async function onGeneratePosterMockupImage(): Promise<void> {
     setIsLoading(true);
     setIsGenerated(false);
     setPosterArch(useGeneratePosterTypeA());
@@ -28,7 +28,7 @@ function useGeneratePosterMockupImage() {
     image,
     isGenerated,
     isLoading,
-    onGeneratePoster,
+    onGeneratePosterMockupImage,
   };
 }
 
