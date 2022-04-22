@@ -23,12 +23,15 @@ const ArtGenerateScene: FunctionComponent = () => {
               <ArtCreateButton />
             </div>
           )}
-          {isLoading && <Button>Please wait</Button>}
+          {isLoading && <Button>Please wait...</Button>}
           {!isGenerated && !isLoading && <Button onClickHandler={onGenerateArt}>Generate</Button>}
         </div>
       </div>
       <TheFooter />
-      <ArtTypeA {...artTypeA} />
+      {
+        /** Generate art in dom. This block is not displayed to the user */
+        <ArtTypeA {...artTypeA} />
+      }
     </Fragment>
   );
 };
