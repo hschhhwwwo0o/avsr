@@ -1,9 +1,9 @@
 import React, { Fragment, FunctionComponent } from "react";
-import { useUser } from "hooks/useUser";
+import { useUserData } from "hooks/useUserData";
 import Avatar from "components/Avatar";
 
 const UserAvatar: FunctionComponent = () => {
-  const { userResponse } = useUser();
+  const { userResponse } = useUserData();
 
   return (
     <Fragment>

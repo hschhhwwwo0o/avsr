@@ -2,7 +2,7 @@ import { useMutation, useQuery, useQueryClient } from "react-query";
 import { useLocation, Location } from "react-router-dom";
 import { apiClient } from "utils/apiClient";
 
-function useUser() {
+function useUserData() {
   const location: Location = useLocation();
   const queryClient = useQueryClient();
 
@@ -36,4 +36,4 @@ function useUser() {
   };
 }
 
-export { useUser };
+export { useUserData };

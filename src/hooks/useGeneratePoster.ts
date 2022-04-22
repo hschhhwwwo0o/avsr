@@ -2,8 +2,8 @@ import { useState } from "react";
 import { useGeneratePosterTypeA } from "./useGeneratePosterTypeA";
 import DomToImage from "dom-to-image";
 
-function useGeneratePoster() {
-  const [posterTypeA, setPosterTypeA] = useState<any>();
+function useGeneratePosterMockupImage() {
+  const [posterArch, setPosterArch] = useState<any>();
   const [image, setImage] = useState<string>("");
   const [isGenerated, setIsGenerated] = useState<boolean>(false);
   const [isLoading, setIsLoading] = useState<boolean>(false);
@@ -11,7 +11,7 @@ function useGeneratePoster() {
   async function onGeneratePoster(): Promise<void> {
     setIsLoading(true);
     setIsGenerated(false);
-    setPosterTypeA(useGeneratePosterTypeA());
+    setPosterArch(useGeneratePosterTypeA());
     setTimeout(async () => {
       const poster: Element | null = document.querySelector("#_POSTER");
       if (poster) {
@@ -24,7 +24,7 @@ function useGeneratePoster() {
   }
 
   return {
-    posterTypeA,
+    posterArch,
     image,
     isGenerated,
     isLoading,
@@ -32,4 +32,4 @@ function useGeneratePoster() {
   };
 }
 
-export { useGeneratePoster };
+export { useGeneratePosterMockupImage };

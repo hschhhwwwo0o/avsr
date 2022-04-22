@@ -23,20 +23,20 @@ body::-webkit-scrollbar-thumb {
   box-sizing: border-box;
 }
 
-.ART:nth-child(1) {
+.POSTER_CARD:nth-child(1) {
   border-top: 1px solid #ebebeb;
 }
 
 @media screen and (min-width: 1024px) {
-  .ART:nth-child(1) {
+  .POSTER_CARD:nth-child(1) {
     border-top: 1px solid #ebebeb;
   }
 
-  .ART:nth-child(2) {
+  .POSTER_CARD:nth-child(2) {
     border-top: 1px solid #ebebeb;
   }
 
-  .ART:nth-child(3) {
+  .POSTER_CARD:nth-child(3) {
     border-top: 1px solid #ebebeb;
   }
 }

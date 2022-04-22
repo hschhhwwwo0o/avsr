@@ -5,7 +5,7 @@ import { NavLink } from "react-router-dom";
 const PosterCard: FunctionComponent = () => {
   return (
     <Fragment>
-      <NavLink to={"/poster/0"} className="ART">
+      <NavLink to={"/poster/0"} className="POSTER_CARD">
         <div className="p-8 border-r border-b border-[#EBEBEB] h-full cursor-pointer">
           <div className="p-4 h-[70vw] flex items-center justify-center sm:p-10 sm:h-[40vw] lg:h-[25vw]">
             <img

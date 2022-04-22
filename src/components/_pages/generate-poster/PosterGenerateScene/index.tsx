@@ -1,5 +1,5 @@
 import React, { Fragment, FunctionComponent } from "react";
-import { useGeneratePoster } from "hooks/useGeneratePoster";
+import { useGeneratePosterMockupImage } from "hooks/useGeneratePoster";
 import { useTranslation } from "react-i18next";
 import TheFooter from "components/TheFooter";
 import Button from "components/Button";
@@ -10,7 +10,7 @@ import GeneratedPosterPreview from "components/_pages/generate-poster/GeneratePo
 import RegeneartePosterPreviewButton from "components/_pages/generate-poster/RegeneartePosterPreviewButton";
 
 const PosterGenerateScene: FunctionComponent = () => {
-  const { posterTypeA, image, isGenerated, isLoading, onGeneratePoster } = useGeneratePoster();
+  const { posterArch, image, isGenerated, isLoading, onGeneratePoster } = useGeneratePosterMockupImage();
   const { t } = useTranslation();
 
   return (
@@ -31,8 +31,8 @@ const PosterGenerateScene: FunctionComponent = () => {
       </div>
       <TheFooter />
       {
-        /** Generate art in dom. This block is not displayed to the user */
-        <PosterTypeA {...posterTypeA} />
+        /** Generate poster in dom. This block is not displayed to the user */
+        <PosterTypeA {...posterArch} />
       }
     </Fragment>
   );

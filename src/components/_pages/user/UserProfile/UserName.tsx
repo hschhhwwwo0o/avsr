@@ -1,9 +1,9 @@
 import React, { Fragment, FunctionComponent, useEffect, useState } from "react";
-import { useUser } from "hooks/useUser";
+import { useUserData } from "hooks/useUserData";
 import User from "store/User";
 
 const UserName: FunctionComponent = () => {
-  const { userResponse, userMutation } = useUser();
+  const { userResponse, userMutation } = useUserData();
   const [username, setUsername] = useState<string>("");
   const [isFirstRender, setIsFirstRender] = useState<boolean>(true);
   const isMyUser = userResponse?.data?._id === User.user.id;

@@ -2,10 +2,10 @@ import React, { Fragment, FunctionComponent } from "react";
 import GridLayout from "layouts/GridLayout";
 import PosterCard from "components/PosterCard";
 import Grid from "components/Grid";
-import { useUser } from "hooks/useUser";
+import { useUserData } from "hooks/useUserData";
 
 const UserPosters: FunctionComponent = () => {
-  const { postersResponse } = useUser();
+  const { postersResponse } = useUserData();
 
   return (
     <Fragment>
