@@ -17,7 +17,7 @@ const Profile: FunctionComponent = () => {
           </span>
         ) : (
           <NavLink to={`/user/${User.user.id}`} className="flex flex-row gap-3 items-center">
-            <span className="uppercase text-sm font-semibold">Profile</span>
+            <span className="uppercase text-sm font-semibold">{t("Profile")}</span>
             <Avatar string={User.user.name} />
           </NavLink>
         )}
