@@ -1,6 +1,5 @@
 import { useQuery } from "react-query";
 import { Params, useParams } from "react-router-dom";
-import User from "store/User";
 import { apiClient } from "utils/apiClient";
 
 function useGetPoster() {
@@ -12,7 +11,7 @@ function useGetPoster() {
       const morePosterResponse = await apiClient.service("posters").find({
         query: {
           $limit: 3,
-          userId: User.user.id,
+          userId: posterResponse.userId,
         },
       });
       return { posterResponse, morePosterResponse };
