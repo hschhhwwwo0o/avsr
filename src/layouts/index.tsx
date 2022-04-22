@@ -5,15 +5,16 @@ import GridLayout from "layouts/GridLayout";
 
 interface ITheLayout {
   withMainLayout?: boolean;
+  withFooter?: boolean;
 }
 
-const TheLayout: FunctionComponent<ITheLayout> = ({ children, withMainLayout = true }) => {
+const TheLayout: FunctionComponent<ITheLayout> = ({ children, withMainLayout = true, withFooter = true }) => {
   return (
     <Fragment>
       <TheHeader />
       {withMainLayout && <GridLayout>{children}</GridLayout>}
       {!withMainLayout && children}
-      <TheFooter />
+      {withFooter && <TheFooter />}
     </Fragment>
   );
 };

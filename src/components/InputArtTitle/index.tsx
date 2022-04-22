@@ -12,7 +12,7 @@ const InputArtTitle: FunctionComponent<IInputArtTitle> = ({ state, setState = ()
         type="text"
         value={state}
         onChange={e => setState(e.target.value)}
-        className="w-full bg-[#252525] uppercase placeholder-white px-4 py-3 text-white outline-none text-sm"
+        className="w-full bg-[#252525] uppercase placeholder-white px-4 py-3 text-white outline-none text-sm text-center lg:text-left"
         placeholder="Enter Title"
       />
     </Fragment>

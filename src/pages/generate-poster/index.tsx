@@ -6,7 +6,7 @@ import { Page } from "types";
 const GeneratePosterPage: Page = () => {
   return (
     <Fragment>
-      <TheLayout withMainLayout={false}>
+      <TheLayout withFooter={false} withMainLayout={false}>
         <ArtGenerateScene />
       </TheLayout>
     </Fragment>
