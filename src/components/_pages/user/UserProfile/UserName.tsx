@@ -3,17 +3,17 @@ import { useUser } from "hooks/useUser";
 import User from "store/User";
 
 const UserName: FunctionComponent = () => {
-  const { data, userMutation } = useUser();
+  const { userResponse, userMutation } = useUser();
   const [username, setUsername] = useState<string>("");
   const [isFirstRender, setIsFirstRender] = useState<boolean>(true);
-  const isMyUser = data?._id === User.user.id;
+  const isMyUser = userResponse?.data?._id === User.user.id;
 
   useEffect(() => {
-    if (data && isFirstRender) {
-      setUsername(data?.name);
+    if (userResponse?.data && isFirstRender) {
+      setUsername(userResponse?.data?.name);
       setIsFirstRender(false);
     }
-  }, [data]);
+  }, [userResponse?.data]);
 
   useEffect(() => {
     if (username) userMutation.mutate({ name: username });

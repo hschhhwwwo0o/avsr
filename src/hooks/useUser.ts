@@ -6,7 +6,13 @@ function useUser() {
   const location: Location = useLocation();
   const queryClient = useQueryClient();
 
-  const { data } = useQuery(["getUser", location], async () => {
+  const userResponse = useQuery(["getUser", location], async () => {
+    const userId: string = location.pathname.replace("/user/", "");
+    const data = await apiClient.service("users").get(userId);
+    return data;
+  });
+
+  const postersResponse = useQuery(["getUserPosters", location], async () => {
     const userId: string = location.pathname.replace("/user/", "");
     const data = await apiClient.service("users").get(userId);
     return data;
@@ -20,7 +26,7 @@ function useUser() {
   });
 
   return {
-    data,
+    userResponse,
     userMutation,
   };
 }

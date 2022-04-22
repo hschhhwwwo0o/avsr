@@ -3,11 +3,11 @@ import { useUser } from "hooks/useUser";
 import Avatar from "components/Avatar";
 
 const UserAvatar: FunctionComponent = () => {
-  const { data } = useUser();
+  const { userResponse } = useUser();
 
   return (
     <Fragment>
-      <Avatar size="big" string={data?.name} image={data?.image} />
+      <Avatar size="big" string={userResponse?.data?.name} image={userResponse?.data?.image} />
     </Fragment>
   );
 };
