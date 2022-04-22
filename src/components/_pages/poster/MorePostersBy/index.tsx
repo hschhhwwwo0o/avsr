@@ -12,7 +12,9 @@ const MorePostersBy: FunctionComponent = () => {
 
   return (
     <Fragment>
-      <div className="py-10 text-center uppercase font-semibold">{t("More arts by")} Itoko Toma</div>
+      <div className="py-10 text-center uppercase font-semibold">
+        {t("More arts by")} {posterResponse?.data?.morePosterResponse.data[0].user.name}
+      </div>
       <GridLayout>
         {!posterResponse?.data?.morePosterResponse?.isLoading ? (
           <Grid>
