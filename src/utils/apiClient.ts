@@ -8,7 +8,7 @@ interface IFeathersClient {
   users: Service<any>;
 }
 
-const socket: SocketIOClient.Socket = io("https://avsr-api.herokuapp.com/");
+const socket: SocketIOClient.Socket = io("http://localhost:3030");
 const apiClient: Application<IFeathersClient> = feathers();
 apiClient.configure(
   socketio(socket, {

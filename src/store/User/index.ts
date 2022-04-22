@@ -1,6 +1,5 @@
-import { makeAutoObservable, runInAction } from "mobx";
+import { makeAutoObservable } from "mobx";
 import { IUser } from "types";
-import { apiClient } from "utils/apiClient";
 
 class User {
   constructor() {
@@ -14,53 +13,13 @@ class User {
     id: "",
   };
 
-  private clearState(): void {
+  public setUser({ email, name, image, id }: { email: string; name: string; image: string; id: string }) {
     this.user = {
-      email: "",
-      name: "",
-      image: "",
-      id: "",
+      email,
+      name,
+      image,
+      id,
     };
-  }
-
-  public async createUser({ name, email, password }: { name: string; email: string; password: string }): Promise<void> {
-    try {
-      await apiClient.service("users").create({ name, email, password });
-      await this.signInUser({ email, password });
-    } catch (error) {
-      this.clearState();
-      console.error(error);
-    }
-  }
-
-  public async signInUser({ email, password }: { email: string; password: string }): Promise<void> {
-    try {
-      const response = await apiClient.authenticate({
-        strategy: "local",
-        email,
-        password,
-      });
-    } catch (error) {
-      this.clearState();
-      console.error(error);
-    }
-  }
-
-  public async reAuthenticateUser(): Promise<void> {
-    try {
-      const { user } = await apiClient.reAuthenticate();
-      runInAction(() => {
-        this.user.email = user.email;
-        this.user.id = user._id;
-      });
-    } catch (error) {
-      this.clearState();
-      console.error(error);
-    }
-  }
-
-  public async logOutUser(): Promise<void> {
-    this.clearState();
   }
 }
 

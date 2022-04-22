@@ -16,10 +16,10 @@ const Profile: FunctionComponent = () => {
             <NavLink to="/create-an-account">{t("Authorization")}</NavLink>
           </span>
         ) : (
-          <span className="flex flex-row gap-3 items-center">
+          <NavLink to={`/user/${User.user.id}`} className="flex flex-row gap-3 items-center">
             <span className="uppercase text-sm font-semibold">Profile</span>
-            <Avatar />
-          </span>
+            <Avatar string={User.user.name} />
+          </NavLink>
         )}
       </div>
     </Fragment>
