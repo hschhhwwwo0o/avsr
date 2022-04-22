@@ -15,7 +15,7 @@ const Avatar: FunctionComponent<IAvatar> = ({ size = "small", image = "", string
   }
 
   function returnTextSize(): string {
-    if (size === "small") return "text-sm";
+    if (size === "small") return "text-xs";
     if (size === "medium") return "text";
     if (size === "big") return "text-lg";
     return "w-[34px] h-[34px]";
