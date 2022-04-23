@@ -19,6 +19,7 @@ I'm on Dribbble: **https://dribbble.com/ssandry0**
 
 [nodejs]: https://nodejs.org/en/
 [mobx]: https://mobx.js.org/README.html
+[feathersjs]: https://feathersjs.com/
 [mongodb]: https://nodejs.org/en/
 [api]: https://lightfilms-api.herokuapp.com/graphql
 [reactjs]: https://reactjs.org/
