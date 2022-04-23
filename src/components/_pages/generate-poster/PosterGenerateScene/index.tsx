@@ -1,6 +1,8 @@
 import React, { Fragment, FunctionComponent, useState } from "react";
 import { useGeneratePosterMockupImage } from "hooks/useGeneratePosterMockupImage";
 import { useTranslation } from "react-i18next";
+import { useCreatePoster } from "hooks/useCreatePoster";
+import User from "store/User";
 import TheFooter from "components/TheFooter";
 import Button from "components/Button";
 import PosterCreateButton from "components/_pages/generate-poster/PosterCreateButton";
@@ -8,8 +10,6 @@ import PosterTypeA from "components/_pages/generate-poster/GeneratePoster/Poster
 import InputPosterTitle from "components/_pages/generate-poster/InputPosterTitle";
 import GeneratedPosterPreview from "components/_pages/generate-poster/GeneratePoster/GeneratedPosterPreview";
 import RegeneartePosterPreviewButton from "components/_pages/generate-poster/RegeneartePosterPreviewButton";
-import { useCreatePoster } from "hooks/useCreatePoster";
-import User from "store/User";
 
 const PosterGenerateScene: FunctionComponent = () => {
   const { posterArch, image, isGenerated, isLoading, onGeneratePosterMockupImage } = useGeneratePosterMockupImage();

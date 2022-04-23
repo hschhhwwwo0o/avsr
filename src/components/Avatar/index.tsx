@@ -18,14 +18,14 @@ const Avatar: FunctionComponent<IAvatar> = ({ size = "small", image = "", string
     if (size === "small") return "text-xs";
     if (size === "medium") return "text";
     if (size === "big") return "text-lg";
-    return "w-[34px] h-[34px]";
+    return "text-xs";
   }
 
   return (
     <Fragment>
       <div className={`${returnSize()} bg-[#252525] overflow-hidden rounded-full flex items-center justify-center`}>
         {image ? (
-          <img src={image} alt="" />
+          <img src={image} alt="User" />
         ) : (
           <span className={`${returnTextSize()} text-white uppercase font-bold`}>{string.slice(0, 2)}</span>
         )}

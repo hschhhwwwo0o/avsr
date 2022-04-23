@@ -7,7 +7,7 @@ import CH from "icons/CH";
 const LanguageSelect: FunctionComponent = () => {
   const { t, i18n } = useTranslation();
 
-  function onChangeLanguage() {
+  function onChangeLanguage(): void {
     if (localStorage.getItem("lng") === "en") {
       i18n.changeLanguage("fr");
       localStorage.setItem("lng", "fr");
@@ -25,6 +25,7 @@ const LanguageSelect: FunctionComponent = () => {
     }
     i18n.changeLanguage("fr");
     localStorage.setItem("lng", "fr");
+    return;
   }
 
   return (

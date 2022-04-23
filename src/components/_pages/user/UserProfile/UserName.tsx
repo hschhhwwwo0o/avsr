@@ -21,7 +21,7 @@ const UserName: FunctionComponent = () => {
 
   return (
     <Fragment>
-      <span className="h-0 pb-16">
+      <span>
         {isMyUser ? (
           <input
             placeholder="Enter your name..."
@@ -30,7 +30,7 @@ const UserName: FunctionComponent = () => {
             onChange={e => setUsername(e.target.value)}
           />
         ) : (
-          <span className="uppercase font-bold text-xl mt-7">{username}</span>
+          <span className="uppercase font-bold text-xl block mt-7">{username}</span>
         )}
       </span>
     </Fragment>

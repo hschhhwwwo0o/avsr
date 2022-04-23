@@ -1,7 +1,7 @@
-import Avatar from "components/Avatar";
 import React, { Fragment, FunctionComponent } from "react";
-import { NavLink } from "react-router-dom";
 import { IPoster } from "types";
+import { NavLink } from "react-router-dom";
+import Avatar from "components/Avatar";
 
 interface IPosterCard {
   data?: IPoster;
