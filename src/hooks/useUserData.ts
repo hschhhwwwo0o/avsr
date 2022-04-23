@@ -19,6 +19,7 @@ function useUserData() {
         $sort: {
           createdAt: -1,
         },
+        $limit: 100,
         userId,
       },
     });
