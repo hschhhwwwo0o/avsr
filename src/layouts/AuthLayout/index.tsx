@@ -7,7 +7,7 @@ const AuthLayout: FunctionComponent = ({ children }) => {
         <div className="flex items-center justify-center lg:w-1/2">
           <div className="w-[432px] pt-8 lg:pt-0">{children}</div>
         </div>
-        <div className="h-[140px] pt-4 lg:pt-0 lg:h-auto lg:w-1/2 lg:p-16">
+        <div className="h-[140px] pt-4 lg:h-auto lg:w-1/2 lg:pt-16 lg:p-16">
           <div className="bg-[#252525] w-full h-full flex items-center justify-center text-white font-bold text-xl lg:text-6xl">
             <span className="uppercase">Abiior</span>
           </div>
