@@ -7,6 +7,7 @@ import AuthLayout from "layouts/AuthLayout";
 import { NavLink } from "react-router-dom";
 import Input from "components/Input";
 import Button from "components/Button";
+import Validate from "components/Validate";
 
 const CreateAnAccountPage: Page = () => {
   const { t } = useTranslation();
@@ -29,9 +30,11 @@ const CreateAnAccountPage: Page = () => {
             <Input state={email} setState={setEmail} placeholder={t("Enter your email")} />
             <Input state={password} setState={setPassword} placeholder={t("Enter your password")} />
             <span className="w-full mt-2">
-              <Button onClickHandler={onConfirm} w="w-full">
-                {t("Create an Account")}
-              </Button>
+              <Validate isValidate={!!(name && email && password)}>
+                <Button onClickHandler={onConfirm} w="w-full">
+                  {t("Create an Account")}
+                </Button>
+              </Validate>
             </span>
             <span className="uppercase text-xs font-semibold">
               {t("Already have an account?")}{" "}
