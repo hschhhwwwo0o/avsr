@@ -12,7 +12,7 @@ const PosterCard: FunctionComponent<IPosterCard> = ({ data }) => {
     <Fragment>
       <NavLink to={`/poster/${data?._id}`} className="POSTER_CARD">
         <div className="p-8 border-r border-b border-[#EBEBEB] h-full cursor-pointer">
-          <div className="p-4 h-[70vw] flex items-center justify-center sm:p-10 sm:h-[40vw] lg:h-[25vw]">
+          <div className="p-4 h-[70vw] flex items-center justify-center sm:p-10 sm:h-[40vw] lg:h-[25vw] select-none pointer-events-none">
             <img className="object-cover" src={data?.image} alt="" />
           </div>
           <div className="mt-6">
