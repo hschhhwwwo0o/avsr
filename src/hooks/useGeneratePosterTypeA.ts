@@ -1,8 +1,17 @@
 function useGeneratePosterTypeA() {
   const bgColors: string[] = ["#252525", "#FFFFFF"];
   const secondBlockColors: string[] = ["#ABFB45", "#FB4591"];
-  const titles: string[] = ["LIFE WITH A RARE DISEASE", "300 million Persons", "Rare Disease worldwide"];
-  const centeredTexts: string[] = ["Save", "Live", "Know", "Need"];
+  const titles: string[] = [
+    "LIFE WITH A RARE DISEASE",
+    "拯救生命",
+    "LA VIE AVEC UNE MALADIE RARE",
+    "300 million Persons",
+    "300 millions de personnes",
+    "Rare Disease worldwide",
+    "Save a life",
+    "Sauver une vie",
+  ];
+  const centeredTexts: string[] = ["Save", "Live", "Know", "Need", "millions", "3亿人", "生命", "Sauvez"];
   const images: string[] = [
     "https://images.unsplash.com/photo-1579780864813-863e246d3bc5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80",
     "https://images.unsplash.com/photo-1580377968211-b6425102326b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80",
